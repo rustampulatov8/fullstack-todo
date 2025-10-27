@@ -1,13 +1,7 @@
 # 📝 Fullstack ToDo App  
 
-![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-green?logo=node.js)
-![Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)
-![Render](https://img.shields.io/badge/API-Render-blueviolet?logo=render)
-![CI/CD](https://img.shields.io/badge/CI/CD-GitHub_Actions-gray?logo=githubactions)
-
-A simple yet modern **Fullstack ToDo App** built with **React (Vite)** and **Node.js (Express)**.  
-Deployed with **Render** (backend) and **Vercel** (frontend), featuring an automated CI/CD pipeline.
+A simple yet powerful **Fullstack ToDo Application** built with **React (Vite)** and **Node.js (Express)**.  
+This project demonstrates a clean fullstack architecture — with REST API, frontend integration, automated CI/CD, and full cloud deployment.
 
 ---
 
@@ -20,26 +14,64 @@ Deployed with **Render** (backend) and **Vercel** (frontend), featuring an autom
 
 ---
 
-## ✨ Features  
-✅ View and manage todo tasks  
-✅ RESTful API with Express  
-✅ React-based frontend with real-time updates  
-✅ Cloud deployment (Render + Vercel)  
-✅ Continuous Integration with GitHub Actions  
+## 🧩 Features  
+
+✅ Create, view, and delete todo items  
+✅ RESTful API built with Express  
+✅ Modern React frontend with Vite  
+✅ Deployed serverless frontend (Vercel)  
+✅ Cloud backend on Render  
+✅ Continuous Integration (GitHub Actions)  
 
 ---
 
-## 🧱 Tech Stack  
-**Frontend:** React (Vite), CSS  
-**Backend:** Node.js, Express, CORS  
-**Cloud:** Render, Vercel  
-**DevOps:** GitHub Actions  
+## 🧠 Tech Stack  
+
+**Frontend:**  
+- React (Vite)  
+- Fetch API  
+- CSS  
+
+**Backend:**  
+- Node.js  
+- Express.js  
+- CORS & Body-Parser  
+- REST API routing  
+
+**DevOps / Cloud:**  
+- Render (Backend Hosting)  
+- Vercel (Frontend Hosting)  
+- GitHub Actions (CI/CD)  
 
 ---
 
-## ⚙️ Local Setup  
+## ⚙️ CI/CD Pipeline  
 
+This project includes a **GitHub Actions** workflow for backend tests:
+
+
+Each `git push` triggers:
+1. Node.js setup  
+2. Dependency install  
+3. Test execution  
+4. Build verification  
+
+---
+
+## 🧑‍💻 Local Setup  
+
+### 1️⃣ Clone the repository  
 ```bash
-# clone repo
 git clone https://github.com/rustampulatov8/fullstack-todo.git
 cd fullstack-todo
+2️⃣ Backend setup
+cd backend
+npm install
+node index.js
+3️⃣ Frontend setup
+cd ../frontend
+npm install
+npm run dev
+
+
+
