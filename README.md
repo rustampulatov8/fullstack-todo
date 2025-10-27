@@ -49,3 +49,29 @@ This project demonstrates a clean fullstack architecture — with REST API, fron
 
 This project includes a **GitHub Actions** workflow for backend tests:
 
+
+Each `git push` triggers:
+1. Node.js setup  
+2. Dependency install  
+3. Test execution  
+4. Build verification  
+
+---
+
+## 🧑‍💻 Local Setup  
+
+### 1️⃣ Clone the repository  
+```bash
+git clone https://github.com/rustampulatov8/fullstack-todo.git
+cd fullstack-todo
+2️⃣ Backend setup
+cd backend
+npm install
+node index.js
+3️⃣ Frontend setup
+cd ../frontend
+npm install
+npm run dev
+
+
+
