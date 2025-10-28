@@ -1,4 +1,5 @@
 # 📝 Fullstack ToDo App  
+![CI](https://github.com/rustampulatov8/fullstack-todo/actions/workflows/ci.yml/badge.svg)
 
 A simple yet powerful **Fullstack ToDo Application** built with **React (Vite)** and **Node.js (Express)**.  
 This project demonstrates a clean fullstack architecture — with REST API, frontend integration, automated CI/CD, and full cloud deployment.
