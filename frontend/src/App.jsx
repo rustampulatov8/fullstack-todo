@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const API = import.meta.env.VITE_API_URL || "http://localhost:4000/api/todos";
+const API_BASE = import.meta.env.PROD
+  ? "https://fullstack-todo-x3bc.onrender.com/api/todos"
+  : "http://localhost:4000/api/todos";
 
 export default function App() {
   const [todos, setTodos] = useState([]);
@@ -12,7 +14,7 @@ export default function App() {
     (async () => {
       try {
         setError("");
-        const res = await fetch(API);
+        const res = await fetch(API_BASE);
         if (!res.ok) throw new Error("Failed to fetch todos");
         const data = await res.json();
         setTodos(data);
@@ -30,7 +32,7 @@ export default function App() {
     setError("");
 
     try {
-      const res = await fetch(API, {
+      const res = await fetch(API_BASE, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title: title.trim() }),
@@ -52,7 +54,7 @@ export default function App() {
     setTodos((t) => t.filter((x) => x.id !== id));
 
     try {
-      const res = await fetch(`${API}/${id}`, { method: "DELETE" });
+      const res = await fetch(`${API_BASE}/${id}`, { method: "DELETE" });
       if (!res.ok) throw new Error("Failed to delete todo");
     } catch (e) {
       setTodos(prev);
@@ -69,7 +71,7 @@ export default function App() {
         <input
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          placeholder="whtat needs to be done?"
+          placeholder="what needs to be done?"
           style={{
             flex: 1,
             padding: "10px 12px",
@@ -105,7 +107,7 @@ export default function App() {
 
       {/* list of todo */}
       {todos.length === 0 ? (
-        <p style={{ opacity: 0.8 }}>Пока задач нет.</p>
+        <p style={{ opacity: 0.8 }}>I don't have anything</p>
       ) : (
         <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
           {todos.map((todo) => (
